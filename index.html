@@ -3,41 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>理髪社 - 見えない資産を可視化する</title>
+    <title>理髪社 - 見えない資産を可視化する | Invisible Asset Studio</title>
+    <meta name="description" content="理髪社は、企業の「見えない資産（インビジブル・アセット）」を実質的な価値として扱い、ブランド価値を増やし続ける仕組みを提供します。イベント企画、クリエイティブ制作、バーバー連携を通じて無形資産を可視化。">
+    <meta name="keywords" content="理髪社,リハツシャ,見えない資産,インビジブルアセット,ブランド価値,バーバー,イベント企画,クリエイティブ制作,無形資産">
+    <meta name="author" content="理髪社">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#09090b">
+    <link rel="canonical" href="https://rihatsusha.com/">
+
+    <!-- OGP -->
+    <meta property="og:title" content="理髪社 - 見えない資産を可視化する">
+    <meta property="og:description" content="企業の「見えない資産（インビジブル・アセット）」を実質的な価値として扱い、ブランド価値を増やし続ける仕組みを提供します。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rihatsusha.com/">
+    <meta property="og:site_name" content="理髪社">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:locale:alternate" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="理髪社 - 見えない資産を可視化する">
+    <meta name="twitter:description" content="企業の「見えない資産」を実質的な価値として扱い、ブランド価値を増やし続ける仕組みを提供します。">
+
+    <!-- 構造化データ JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "理髪社",
+        "alternateName": "Rihatsusha",
+        "url": "https://rihatsusha.com",
+        "description": "企業の「見えない資産（インビジブル・アセット）」を実質的な価値として扱い、ブランド価値を増やし続ける仕組みを提供します。",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "東京都",
+            "addressCountry": "JP"
+        },
+        "email": "info@rihatsusha.com",
+        "foundingDate": "2025",
+        "knowsAbout": ["ブランド価値", "無形資産", "イベント企画", "クリエイティブ制作", "バーバーコミュニティ"],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "サービス一覧",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "イベント企画・運営",
+                        "description": "バーバーコミュニティと企業を繋ぐイベントを企画・運営し、生の支持と共感を獲得します。"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "クリエイティブ制作",
+                        "description": "写真・動画・ショートクリップなど、広告宣伝に転載可能な高品質な素材を制作します。"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "バーバー連携",
+                        "description": "バーバーコミュニティとの深い関係を活かし、企業が欲しい価値を現場から直接抽出します。"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
+
+    <!-- WebSite 構造化データ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "理髪社",
+        "url": "https://rihatsusha.com",
+        "inLanguage": ["ja", "en"]
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700;900&family=Noto+Sans+JP:wght@200;300;400;500;600;700&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- カーソルグロー -->
     <div class="cursor-glow" id="cursorGlow"></div>
-
-    <!-- グレイン・オーバーレイ -->
     <div class="grain-overlay"></div>
 
     <!-- ナビゲーション -->
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="メインナビゲーション">
         <div class="container">
-            <div class="nav-brand">
-                <img src="麻型稲妻-黒.png" alt="理髪社" class="logo">
+            <a href="/" class="nav-brand" aria-label="理髪社 ホーム">
+                <img src="麻型稲妻-黒.png" alt="理髪社ロゴ" class="logo" width="36" height="36">
                 <span class="brand-name">理髪社</span>
-            </div>
+            </a>
             <ul class="nav-menu">
-                <li><a href="#mission" data-text="理念">理念</a></li>
-                <li><a href="#services" data-text="サービス">サービス</a></li>
-                <li><a href="#value" data-text="価値">価値</a></li>
-                <li><a href="#contact" class="nav-cta">お問い合わせ</a></li>
+                <li><a href="#mission" data-i18n="nav.philosophy">理念</a></li>
+                <li><a href="#services" data-i18n="nav.services">サービス</a></li>
+                <li><a href="#value" data-i18n="nav.value">価値</a></li>
+                <li><a href="members.html" data-i18n="nav.members">メンバー</a></li>
+                <li><a href="#contact" class="nav-cta" data-i18n="nav.contact">お問い合わせ</a></li>
             </ul>
-            <div class="hamburger" aria-label="メニュー">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="nav-right">
+                <button class="lang-switch" id="langSwitch" aria-label="言語切替">
+                    <span class="lang-label" data-lang="ja">EN</span>
+                    <span class="lang-label active" data-lang="en">JA</span>
+                </button>
+                <div class="hamburger" aria-label="メニュー" role="button" tabindex="0">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </div>
     </nav>
 
-    <!-- ヒーローセクション -->
+    <!-- ヒーロー -->
     <section class="hero">
         <div class="hero-bg">
             <div class="hero-gradient"></div>
@@ -53,218 +139,182 @@
                 <span class="eyebrow-line"></span>
             </div>
             <h1 class="hero-title">
-                <span class="title-line"><span class="title-word" data-delay="0">見えない</span><span class="title-word" data-delay="1">資産を</span></span>
-                <span class="title-line"><span class="title-word" data-delay="2">可視化する</span></span>
+                <span class="title-line"><span class="title-word" data-delay="0" data-i18n="hero.title1">見えない資産を</span></span>
+                <span class="title-line"><span class="title-word" data-delay="1" data-i18n="hero.title2">可視化する</span></span>
             </h1>
-            <p class="hero-subtitle">企業の「見えない資産（インビジブル・アセット）」を<br>実質的な価値として扱い、ブランド価値を増やし続ける仕組みを提供します</p>
+            <p class="hero-subtitle" data-i18n="hero.subtitle">企業の「見えない資産（インビジブル・アセット）」を<br>実質的な価値として扱い、ブランド価値を増やし続ける仕組みを提供します</p>
             <div class="hero-actions">
-                <a href="#mission" class="cta-button primary"><span>詳しく見る</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a>
-                <a href="#contact" class="cta-button secondary"><span>お問い合わせ</span></a>
+                <a href="#mission" class="cta-button primary"><span data-i18n="hero.cta1">詳しく見る</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a>
+                <a href="#contact" class="cta-button secondary"><span data-i18n="hero.cta2">お問い合わせ</span></a>
             </div>
             <div class="hero-scroll-indicator">
-                <div class="scroll-mouse">
-                    <div class="scroll-wheel"></div>
-                </div>
+                <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
                 <span>Scroll</span>
             </div>
         </div>
     </section>
 
-    <!-- ミッションセクション -->
+    <!-- ミッション -->
     <section id="mission" class="mission">
         <div class="container">
             <div class="section-header">
                 <span class="section-label">Philosophy</span>
-                <h2 class="section-title">事業理念</h2>
-                <p class="section-subtitle">通常の財務会計では捉えきれない価値を、<br>企業の実質的な成長エンジンへ。</p>
+                <h2 class="section-title" data-i18n="mission.title">事業理念</h2>
+                <p class="section-subtitle" data-i18n="mission.subtitle">通常の財務会計では捉えきれない価値を、<br>企業の実質的な成長エンジンへ。</p>
             </div>
             <div class="mission-content">
                 <div class="mission-text">
-                    <p class="lead-text">
-                        理髪社は、通常の財務会計では捉えきれない<strong>「見えない資産（インビジブル・アセット）」</strong>を、企業の実質的な価値として扱うプロジェクトを展開しています。
-                    </p>
+                    <p class="lead-text" data-i18n="mission.lead">理髪社は、通常の財務会計では捉えきれない<strong>「見えない資産（インビジブル・アセット）」</strong>を、企業の実質的な価値として扱うプロジェクトを展開しています。</p>
                     <div class="assets-grid">
                         <div class="asset-card visible">
                             <div class="card-badge">Tangible</div>
-                            <h3>会計上の資産</h3>
+                            <h3 data-i18n="mission.tangible.title">会計上の資産</h3>
                             <ul>
-                                <li>現金</li>
-                                <li>流動資産</li>
-                                <li>固定資産</li>
+                                <li data-i18n="mission.tangible.item1">現金</li>
+                                <li data-i18n="mission.tangible.item2">流動資産</li>
+                                <li data-i18n="mission.tangible.item3">固定資産</li>
                             </ul>
-                            <p class="asset-note">貸借対照表に数字として残る「見える資産」</p>
+                            <p class="asset-note" data-i18n="mission.tangible.note">貸借対照表に数字として残る「見える資産」</p>
                         </div>
                         <div class="asset-card invisible">
                             <div class="card-badge gold">Intangible</div>
-                            <h3>理髪社が扱う資産</h3>
+                            <h3 data-i18n="mission.intangible.title">理髪社が扱う資産</h3>
                             <ul>
-                                <li>ブランド価値</li>
-                                <li>ユーザーや世間からの支持（プロップス）</li>
-                                <li>信用・評判・熱量</li>
-                                <li>顧客との関係性</li>
+                                <li data-i18n="mission.intangible.item1">ブランド価値</li>
+                                <li data-i18n="mission.intangible.item2">ユーザーや世間からの支持（プロップス）</li>
+                                <li data-i18n="mission.intangible.item3">信用・評判・熱量</li>
+                                <li data-i18n="mission.intangible.item4">顧客との関係性</li>
                             </ul>
-                            <p class="asset-note">会計上は計上されないが、事業の成長に直結する本質的な資産</p>
+                            <p class="asset-note" data-i18n="mission.intangible.note">会計上は計上されないが、事業の成長に直結する本質的な資産</p>
                         </div>
                     </div>
                     <div class="mission-statement">
                         <div class="statement-icon">
                             <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
                         </div>
-                        <p class="statement-text">
-                            理髪社の使命は、この見えない資産を<br>"浮き彫りにし、蓄積し、活用可能な形に変換する"<br>ことにあります。
-                        </p>
+                        <p class="statement-text" data-i18n="mission.statement">理髪社の使命は、この見えない資産を<br>"浮き彫りにし、蓄積し、活用可能な形に変換する"<br>ことにあります。</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- サービスセクション -->
+    <!-- サービス -->
     <section id="services" class="services">
         <div class="container">
             <div class="section-header">
                 <span class="section-label">Services</span>
-                <h2 class="section-title">サービス</h2>
-                <p class="section-subtitle">ブランド価値を最大化する3つのアプローチ</p>
+                <h2 class="section-title" data-i18n="services.title">サービス</h2>
+                <p class="section-subtitle" data-i18n="services.subtitle">ブランド価値を最大化する3つのアプローチ</p>
             </div>
             <div class="services-grid">
                 <div class="service-card" data-index="01">
-                    <div class="service-icon-wrap">
-                        <div class="service-icon">🎪</div>
-                    </div>
+                    <div class="service-icon-wrap"><div class="service-icon">🎪</div></div>
                     <div class="service-content">
-                        <h3>イベント企画・運営</h3>
-                        <p>バーバーコミュニティと企業を繋ぐイベントを企画・運営し、生の支持と共感を獲得します。</p>
+                        <h3 data-i18n="services.event.title">イベント企画・運営</h3>
+                        <p data-i18n="services.event.desc">バーバーコミュニティと企業を繋ぐイベントを企画・運営し、生の支持と共感を獲得します。</p>
                     </div>
-                    <div class="service-arrow">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-                    </div>
+                    <div class="service-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></div>
                 </div>
                 <div class="service-card" data-index="02">
-                    <div class="service-icon-wrap">
-                        <div class="service-icon">🎬</div>
-                    </div>
+                    <div class="service-icon-wrap"><div class="service-icon">🎬</div></div>
                     <div class="service-content">
-                        <h3>クリエイティブ制作</h3>
-                        <p>写真・動画・ショートクリップなど、広告宣伝に転載可能な高品質な素材を制作します。</p>
+                        <h3 data-i18n="services.creative.title">クリエイティブ制作</h3>
+                        <p data-i18n="services.creative.desc">写真・動画・ショートクリップなど、広告宣伝に転載可能な高品質な素材を制作します。</p>
                     </div>
-                    <div class="service-arrow">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-                    </div>
+                    <div class="service-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></div>
                 </div>
                 <div class="service-card" data-index="03">
-                    <div class="service-icon-wrap">
-                        <div class="service-icon">💈</div>
-                    </div>
+                    <div class="service-icon-wrap"><div class="service-icon">💈</div></div>
                     <div class="service-content">
-                        <h3>バーバー連携</h3>
-                        <p>バーバーコミュニティとの深い関係を活かし、企業が欲しい価値を現場から直接抽出します。</p>
+                        <h3 data-i18n="services.barber.title">バーバー連携</h3>
+                        <p data-i18n="services.barber.desc">バーバーコミュニティとの深い関係を活かし、企業が欲しい価値を現場から直接抽出します。</p>
                     </div>
-                    <div class="service-arrow">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-                    </div>
+                    <div class="service-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 価値提供セクション -->
+    <!-- 価値提供 -->
     <section id="value" class="value">
         <div class="container">
             <div class="section-header">
                 <span class="section-label">Value Proposition</span>
-                <h2 class="section-title">提供価値</h2>
-                <p class="section-subtitle">企業の見えない資産を、持続的な成長の原動力へ。</p>
+                <h2 class="section-title" data-i18n="value.title">提供価値</h2>
+                <p class="section-subtitle" data-i18n="value.subtitle">企業の見えない資産を、持続的な成長の原動力へ。</p>
             </div>
             <div class="value-content">
                 <div class="value-item">
                     <div class="value-number">01</div>
                     <div class="value-text">
-                        <h3>ブランドの無形資産を増やす</h3>
-                        <p>業界横断的な認知、感情的な支持、SNS・街頭・店舗での話題化、コミュニティ内での"語られる理由"を獲得します。これは広告費では買いにくい「生の支持」であり、企業のB/Sには載らないが事業成長に効く資産です。</p>
+                        <h3 data-i18n="value.v1.title">ブランドの無形資産を増やす</h3>
+                        <p data-i18n="value.v1.desc">業界横断的な認知、感情的な支持、SNS・街頭・店舗での話題化、コミュニティ内での"語られる理由"を獲得します。これは広告費では買いにくい「生の支持」であり、企業のB/Sには載らないが事業成長に効く資産です。</p>
                     </div>
                 </div>
                 <div class="value-item">
                     <div class="value-number">02</div>
                     <div class="value-text">
-                        <h3>投下したキャッシュを<br>"プロップス"へ転換</h3>
-                        <p>企業がイベントで負担する費用は、単なる消費ではなく、世間の支持・共感（プロップス）と交換され、そのプロップスを広告素材・ブランド価値として回収できます。重要な原則：イベントを行うことで損失になることは絶対にありません。</p>
+                        <h3 data-i18n="value.v2.title">投下したキャッシュを"プロップス"へ転換</h3>
+                        <p data-i18n="value.v2.desc">企業がイベントで負担する費用は、単なる消費ではなく、世間の支持・共感（プロップス）と交換され、そのプロップスを広告素材・ブランド価値として回収できます。重要な原則：イベントを行うことで損失になることは絶対にありません。</p>
                     </div>
                 </div>
                 <div class="value-item">
                     <div class="value-number">03</div>
                     <div class="value-text">
-                        <h3>高品質な「素材」を<br>継続的に提供</h3>
-                        <p>理髪社が行うイベントや撮影は、プロップスを視覚的な資産に変換します。写真、動画、イベントの記録、ショートクリップ、広告宣伝に転載可能な構図・スチル。これらは一度作れば長期利用可能な再生産性のある資産です。</p>
+                        <h3 data-i18n="value.v3.title">高品質な「素材」を継続的に提供</h3>
+                        <p data-i18n="value.v3.desc">理髪社が行うイベントや撮影は、プロップスを視覚的な資産に変換します。写真、動画、イベントの記録、ショートクリップ、広告宣伝に転載可能な構図・スチル。これらは一度作れば長期利用可能な再生産性のある資産です。</p>
                     </div>
                 </div>
                 <div class="value-item">
                     <div class="value-number">04</div>
                     <div class="value-text">
-                        <h3>現場由来の<br>リアルな価値</h3>
-                        <p>バーバーが持つリアリティ、店舗に来る顧客層、現場の熱量。これらは通常の代理店やマーケティング会社には拾いきれません。理髪社は"バーバーコミュニティと企業"の双方を理解しているため、企業が欲しい価値を現場から直接抽出することができます。</p>
+                        <h3 data-i18n="value.v4.title">現場由来のリアルな価値</h3>
+                        <p data-i18n="value.v4.desc">バーバーが持つリアリティ、店舗に来る顧客層、現場の熱量。これらは通常の代理店やマーケティング会社には拾いきれません。理髪社は"バーバーコミュニティと企業"の双方を理解しているため、企業が欲しい価値を現場から直接抽出することができます。</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 循環サイクルセクション -->
+    <!-- 循環サイクル -->
     <section class="cycle">
         <div class="container">
             <div class="section-header">
                 <span class="section-label">Business Cycle</span>
-                <h2 class="section-title">循環サイクル</h2>
-                <p class="section-subtitle">価値が生まれ、蓄積し、循環する仕組み</p>
+                <h2 class="section-title" data-i18n="cycle.title">循環サイクル</h2>
+                <p class="section-subtitle" data-i18n="cycle.subtitle">価値が生まれ、蓄積し、循環する仕組み</p>
             </div>
             <div class="cycle-wrapper">
                 <div class="cycle-diagram">
                     <div class="cycle-step" data-step="1">
                         <div class="cycle-icon">💵</div>
-                        <div class="cycle-label">
-                            <h3>現金（流動資産）</h3>
-                            <span class="cycle-sub">Cash Investment</span>
-                        </div>
+                        <div class="cycle-label"><h3 data-i18n="cycle.s1">現金（流動資産）</h3><span class="cycle-sub">Cash Investment</span></div>
                     </div>
                     <div class="cycle-connector"><div class="connector-line"></div></div>
                     <div class="cycle-step" data-step="2">
                         <div class="cycle-icon">🎪</div>
-                        <div class="cycle-label">
-                            <h3>イベント・企画</h3>
-                            <span class="cycle-sub">Event & Planning</span>
-                        </div>
+                        <div class="cycle-label"><h3 data-i18n="cycle.s2">イベント・企画</h3><span class="cycle-sub">Event & Planning</span></div>
                     </div>
                     <div class="cycle-connector"><div class="connector-line"></div></div>
                     <div class="cycle-step" data-step="3">
                         <div class="cycle-icon">👏</div>
-                        <div class="cycle-label">
-                            <h3>プロップス獲得</h3>
-                            <span class="cycle-sub">Props Acquisition</span>
-                        </div>
+                        <div class="cycle-label"><h3 data-i18n="cycle.s3">プロップス獲得</h3><span class="cycle-sub">Props Acquisition</span></div>
                     </div>
                     <div class="cycle-connector"><div class="connector-line"></div></div>
                     <div class="cycle-step" data-step="4">
                         <div class="cycle-icon">📸</div>
-                        <div class="cycle-label">
-                            <h3>素材の蓄積</h3>
-                            <span class="cycle-sub">Material Accumulation</span>
-                        </div>
+                        <div class="cycle-label"><h3 data-i18n="cycle.s4">素材の蓄積</h3><span class="cycle-sub">Material Accumulation</span></div>
                     </div>
                     <div class="cycle-connector"><div class="connector-line"></div></div>
                     <div class="cycle-step" data-step="5">
                         <div class="cycle-icon">📢</div>
-                        <div class="cycle-label">
-                            <h3>2次利用</h3>
-                            <span class="cycle-sub">Secondary Usage</span>
-                        </div>
+                        <div class="cycle-label"><h3 data-i18n="cycle.s5">2次利用</h3><span class="cycle-sub">Secondary Usage</span></div>
                     </div>
                     <div class="cycle-connector"><div class="connector-line"></div></div>
                     <div class="cycle-step" data-step="6">
                         <div class="cycle-icon">⭐</div>
-                        <div class="cycle-label">
-                            <h3>ブランド価値向上</h3>
-                            <span class="cycle-sub">Brand Value Growth</span>
-                        </div>
+                        <div class="cycle-label"><h3 data-i18n="cycle.s6">ブランド価値向上</h3><span class="cycle-sub">Brand Value Growth</span></div>
                     </div>
                 </div>
                 <div class="cycle-loop-badge">
@@ -272,37 +322,31 @@
                     <span>Endless Loop</span>
                 </div>
             </div>
-            <p class="cycle-description">
-                <strong>プロップス → マテリアル → ブランド価値 → 利益</strong>というループが続くため、<br>費用対効果が長期的に効いていきます。
-            </p>
+            <p class="cycle-description" data-i18n="cycle.desc"><strong>プロップス → マテリアル → ブランド価値 → 利益</strong>というループが続くため、<br>費用対効果が長期的に効いていきます。</p>
         </div>
     </section>
 
-    <!-- お問い合わせセクション -->
+    <!-- お問い合わせ -->
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
                 <span class="section-label">Contact</span>
-                <h2 class="section-title">お問い合わせ</h2>
-                <p class="section-subtitle">見えない資産の可視化を、はじめましょう。</p>
+                <h2 class="section-title" data-i18n="contact.title">お問い合わせ</h2>
+                <p class="section-subtitle" data-i18n="contact.subtitle">見えない資産の可視化を、はじめましょう。</p>
             </div>
             <div class="contact-layout">
                 <div class="contact-info">
                     <div class="info-item">
-                        <div class="info-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                        </div>
+                        <div class="info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
                         <div>
-                            <h4>所在地</h4>
-                            <p>東京都</p>
+                            <h4 data-i18n="contact.location.label">所在地</h4>
+                            <p data-i18n="contact.location.value">東京都</p>
                         </div>
                     </div>
                     <div class="info-item">
-                        <div class="info-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                        </div>
+                        <div class="info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
                         <div>
-                            <h4>メール</h4>
+                            <h4 data-i18n="contact.email.label">メール</h4>
                             <p>info@rihatsusha.com</p>
                         </div>
                     </div>
@@ -311,24 +355,24 @@
                     <form>
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="name">お名前 <span class="required">*</span></label>
-                                <input type="text" id="name" name="name" required placeholder="山田 太郎">
+                                <label for="name"><span data-i18n="contact.form.name">お名前</span> <span class="required">*</span></label>
+                                <input type="text" id="name" name="name" required data-i18n-placeholder="contact.form.name_ph" placeholder="山田 太郎">
                             </div>
                             <div class="form-group">
-                                <label for="company">会社名</label>
-                                <input type="text" id="company" name="company" placeholder="株式会社○○">
+                                <label for="company" data-i18n="contact.form.company">会社名</label>
+                                <input type="text" id="company" name="company" data-i18n-placeholder="contact.form.company_ph" placeholder="株式会社○○">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="email">メールアドレス <span class="required">*</span></label>
+                            <label for="email"><span data-i18n="contact.form.email">メールアドレス</span> <span class="required">*</span></label>
                             <input type="email" id="email" name="email" required placeholder="you@company.com">
                         </div>
                         <div class="form-group">
-                            <label for="message">お問い合わせ内容 <span class="required">*</span></label>
-                            <textarea id="message" name="message" rows="5" required placeholder="お気軽にご相談ください"></textarea>
+                            <label for="message"><span data-i18n="contact.form.message">お問い合わせ内容</span> <span class="required">*</span></label>
+                            <textarea id="message" name="message" rows="5" required data-i18n-placeholder="contact.form.message_ph" placeholder="お気軽にご相談ください"></textarea>
                         </div>
                         <button type="submit" class="submit-button">
-                            <span>送信する</span>
+                            <span data-i18n="contact.form.submit">送信する</span>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                         </button>
                     </form>
@@ -338,20 +382,26 @@
     </section>
 
     <!-- フッター -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <img src="麻型稲妻-黒.png" alt="理髪社" class="footer-logo">
+                    <img src="麻型稲妻-黒.png" alt="理髪社ロゴ" class="footer-logo" width="32" height="32">
                     <span class="footer-brand-name">理髪社</span>
                 </div>
-                <p class="footer-tagline">見えない資産を可視化する</p>
+                <nav class="footer-nav" aria-label="フッターナビ">
+                    <a href="/" data-i18n="footer.home">ホーム</a>
+                    <a href="members.html" data-i18n="footer.members">メンバー</a>
+                    <a href="#contact" data-i18n="nav.contact">お問い合わせ</a>
+                </nav>
+                <p class="footer-tagline" data-i18n="footer.tagline">見えない資産を可視化する</p>
                 <div class="footer-divider"></div>
                 <p class="footer-copyright">&copy; 2025 理髪社 All rights reserved.</p>
             </div>
         </div>
     </footer>
 
+    <script src="i18n.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

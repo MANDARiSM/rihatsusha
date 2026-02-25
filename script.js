@@ -118,7 +118,8 @@
             '.cycle-loop-badge',
             '.contact-info',
             '.contact-form',
-            '.contact-text'
+            '.contact-text',
+            '.member-card'
         ];
 
         selectors.forEach(sel => {
@@ -156,7 +157,11 @@
             btn.style.transform = 'scale(0.97)';
             setTimeout(() => {
                 btn.style.transform = '';
-                alert('お問い合わせありがとうございます。内容を確認次第、ご連絡いたします。');
+                const lang = window.rihatsusha ? window.rihatsusha.getCurrentLang() : 'ja';
+                const msg = window.rihatsusha
+                    ? (window.rihatsusha.translations[lang]?.['contact.form.alert'] || 'お問い合わせありがとうございます。内容を確認次第、ご連絡いたします。')
+                    : 'お問い合わせありがとうございます。内容を確認次第、ご連絡いたします。';
+                alert(msg);
                 contactForm.reset();
             }, 200);
         });
