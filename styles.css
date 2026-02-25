@@ -927,10 +927,55 @@ section {
     font-weight: 400;
 }
 
-.service-arrow {
+.service-top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.service-badge {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 100px;
+    border: 1.5px solid rgba(0,0,0,0.15);
+    color: var(--text-dark-secondary);
+}
+
+.service-badge.hot {
+    background: var(--orange);
+    color: var(--black);
+    border-color: var(--orange);
+}
+
+.service-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+.service-detail {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-dark);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.service-arrow {
     color: rgba(26,26,26,0.25);
     transition: all var(--duration-fast) ease;
+    margin-top: 0;
 }
 
 .service-card:hover .service-arrow {
