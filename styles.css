@@ -1,5 +1,5 @@
 /* ===================================================================
-   理髪社 — Premium Corporate Site
+   理髪社 — Editorial / Concert-Ticket Aesthetic
    ================================================================ */
 
 /* Reset */
@@ -10,9 +10,9 @@
 }
 
 :root {
-    --black: #09090b;
-    --black-light: #18181b;
-    --black-card: #1c1c1f;
+    --black: #0a0a0a;
+    --black-light: #111111;
+    --black-card: #1a1a1a;
     --gray-900: #27272a;
     --gray-800: #3f3f46;
     --gray-700: #52525b;
@@ -23,11 +23,16 @@
     --gray-200: #f4f4f5;
     --gray-100: #fafafa;
     --white: #ffffff;
-    --gold: #c9a84c;
-    --gold-light: #e8d48b;
-    --gold-dim: rgba(201, 168, 76, 0.15);
-    --gold-glow: rgba(201, 168, 76, 0.4);
+    --cream: #F0EBE0;
+    --cream-dark: #E5DFD2;
+    --cream-dim: rgba(240, 235, 224, 0.10);
+    --orange: #FF6B35;
+    --orange-light: #FF8F5E;
+    --orange-dim: rgba(255, 107, 53, 0.15);
+    --orange-glow: rgba(255, 107, 53, 0.4);
     --accent-blue: #3b82f6;
+    --text-dark: #1a1a1a;
+    --text-dark-secondary: #3a3a3a;
     --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
     --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
     --duration: 0.6s;
@@ -40,7 +45,7 @@ html {
 }
 
 body {
-    font-family: 'Noto Sans JP', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'Inter', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
     color: var(--gray-400);
     line-height: 1.8;
     letter-spacing: 0.02em;
@@ -51,7 +56,7 @@ body {
 }
 
 ::selection {
-    background: var(--gold);
+    background: var(--orange);
     color: var(--black);
 }
 
@@ -61,7 +66,7 @@ body {
     inset: 0;
     z-index: 9998;
     pointer-events: none;
-    opacity: 0.035;
+    opacity: 0.03;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
     background-repeat: repeat;
     background-size: 256px;
@@ -73,7 +78,7 @@ body {
     width: 600px;
     height: 600px;
     border-radius: 50%;
-    background: radial-gradient(circle, var(--gold-dim) 0%, transparent 70%);
+    background: radial-gradient(circle, var(--orange-dim) 0%, transparent 70%);
     pointer-events: none;
     z-index: 0;
     transform: translate(-50%, -50%);
@@ -101,7 +106,7 @@ body {
 }
 
 .navbar.scrolled {
-    background: rgba(9, 9, 11, 0.85);
+    background: rgba(10, 10, 10, 0.88);
     backdrop-filter: blur(20px) saturate(1.4);
     -webkit-backdrop-filter: blur(20px) saturate(1.4);
     border-bottom: 1px solid rgba(255,255,255,0.06);
@@ -135,7 +140,7 @@ body {
 .brand-name {
     font-family: 'Noto Serif JP', serif;
     font-size: 1.3rem;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--white);
     letter-spacing: 0.15em;
 }
@@ -150,13 +155,15 @@ body {
 .nav-menu a {
     text-decoration: none;
     color: var(--gray-500);
-    font-weight: 400;
-    font-size: 0.875rem;
-    letter-spacing: 0.06em;
+    font-weight: 500;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
     transition: color var(--duration-fast) ease;
     padding: 8px 16px;
     border-radius: 6px;
     position: relative;
+    font-family: 'Inter', sans-serif;
 }
 
 .nav-menu a:hover {
@@ -164,19 +171,21 @@ body {
 }
 
 .nav-menu .nav-cta {
-    background: var(--white);
+    background: var(--orange);
     color: var(--black) !important;
-    font-weight: 500;
-    padding: 8px 24px;
+    font-weight: 600;
+    padding: 10px 28px;
     border-radius: 100px;
     transition: all var(--duration-fast) ease;
+    letter-spacing: 0.1em;
+    font-size: 0.75rem;
 }
 
 .nav-menu .nav-cta:hover {
-    background: var(--gold);
+    background: var(--orange-light);
     color: var(--black) !important;
     transform: translateY(-1px);
-    box-shadow: 0 4px 20px var(--gold-glow);
+    box-shadow: 0 4px 20px var(--orange-glow);
 }
 
 .nav-right {
@@ -206,7 +215,7 @@ body {
 
 .lang-label {
     font-size: 0.65rem;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 0.1em;
     padding: 4px 10px;
     border-radius: 100px;
@@ -257,6 +266,7 @@ body {
     justify-content: center;
     position: relative;
     overflow: hidden;
+    background: var(--black);
 }
 
 .hero-bg {
@@ -269,8 +279,8 @@ body {
     position: absolute;
     inset: 0;
     background:
-        radial-gradient(ellipse 80% 60% at 50% 40%, rgba(201,168,76,0.08) 0%, transparent 60%),
-        radial-gradient(ellipse 50% 80% at 80% 20%, rgba(59,130,246,0.05) 0%, transparent 50%),
+        radial-gradient(ellipse 80% 60% at 50% 40%, rgba(255,107,53,0.06) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 80% at 80% 20%, rgba(240,235,224,0.03) 0%, transparent 50%),
         linear-gradient(180deg, var(--black) 0%, var(--black-light) 100%);
 }
 
@@ -278,8 +288,8 @@ body {
     position: absolute;
     inset: 0;
     background-image:
-        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+        linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
     background-size: 80px 80px;
     mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black 20%, transparent 70%);
     -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black 20%, transparent 70%);
@@ -295,7 +305,7 @@ body {
 .hero-orb-1 {
     width: 400px;
     height: 400px;
-    background: rgba(201,168,76,0.12);
+    background: rgba(255,107,53,0.10);
     top: 10%;
     left: 15%;
     animation-delay: 0s;
@@ -304,7 +314,7 @@ body {
 .hero-orb-2 {
     width: 300px;
     height: 300px;
-    background: rgba(59,130,246,0.08);
+    background: rgba(240,235,224,0.06);
     top: 60%;
     right: 10%;
     animation-delay: -7s;
@@ -313,7 +323,7 @@ body {
 .hero-orb-3 {
     width: 200px;
     height: 200px;
-    background: rgba(201,168,76,0.06);
+    background: rgba(255,107,53,0.05);
     bottom: 20%;
     left: 50%;
     animation-delay: -14s;
@@ -329,7 +339,7 @@ body {
 .hero-content {
     text-align: center;
     z-index: 2;
-    max-width: 900px;
+    max-width: 960px;
     padding: 0 20px;
     position: relative;
 }
@@ -352,21 +362,22 @@ body {
 
 .eyebrow-text {
     font-family: 'Inter', sans-serif;
-    font-size: 0.75rem;
-    font-weight: 400;
-    letter-spacing: 0.25em;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.3em;
     text-transform: uppercase;
-    color: var(--gray-600);
+    color: var(--orange);
 }
 
 .hero-title {
     font-family: 'Noto Serif JP', serif;
-    font-size: clamp(2.8rem, 7vw, 5.5rem);
-    font-weight: 700;
+    font-size: clamp(3.2rem, 8vw, 6.5rem);
+    font-weight: 900;
     color: var(--white);
-    line-height: 1.3;
-    letter-spacing: 0.04em;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
     margin-bottom: 32px;
+    text-transform: uppercase;
 }
 
 .title-line {
@@ -412,32 +423,34 @@ body {
     animation: fadeInUp 1s var(--ease-out-expo) 1.1s forwards;
 }
 
-/* CTAボタン */
+/* CTA Buttons */
 .cta-button {
     display: inline-flex;
     align-items: center;
     gap: 10px;
     padding: 16px 36px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    letter-spacing: 0.08em;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
     text-decoration: none;
     border-radius: 100px;
     transition: all var(--duration-fast) var(--ease-out-quart);
     position: relative;
     overflow: hidden;
     cursor: pointer;
+    font-family: 'Inter', sans-serif;
 }
 
 .cta-button.primary {
-    background: var(--white);
+    background: var(--orange);
     color: var(--black);
 }
 
 .cta-button.primary:hover {
-    background: var(--gold);
+    background: var(--orange-light);
     transform: translateY(-2px);
-    box-shadow: 0 8px 30px var(--gold-glow);
+    box-shadow: 0 8px 30px var(--orange-glow);
 }
 
 .cta-button.primary svg {
@@ -451,13 +464,13 @@ body {
 .cta-button.secondary {
     background: transparent;
     color: var(--gray-400);
-    border: 1px solid var(--gray-800);
+    border: 1.5px solid var(--gray-700);
 }
 
 .cta-button.secondary:hover {
     color: var(--white);
-    border-color: var(--gray-600);
-    background: rgba(255,255,255,0.05);
+    border-color: var(--orange);
+    background: rgba(255,107,53,0.05);
     transform: translateY(-2px);
 }
 
@@ -486,7 +499,7 @@ body {
 .scroll-wheel {
     width: 3px;
     height: 8px;
-    background: var(--gray-600);
+    background: var(--orange);
     border-radius: 2px;
     position: absolute;
     top: 8px;
@@ -508,6 +521,62 @@ body {
     color: var(--gray-700);
 }
 
+/* ───────────────────── Marquee ───────────────────── */
+.marquee {
+    overflow: hidden;
+    background: var(--orange);
+    padding: 14px 0;
+}
+
+.marquee-track {
+    display: flex;
+    gap: 48px;
+    animation: marqueeScroll 20s linear infinite;
+    white-space: nowrap;
+}
+
+.marquee-track span {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--black);
+}
+
+@keyframes marqueeScroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+/* ───────────────────── Tag Row ───────────────────── */
+.tag-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.tag-pill {
+    padding: 8px 20px;
+    border: 1.5px solid var(--gray-700);
+    border-radius: 100px;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gray-400);
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.tag-pill:hover {
+    border-color: var(--orange);
+    color: var(--orange);
+}
+
 /* ───────────────────── Section Shared ───────────────────── */
 section {
     padding: clamp(80px, 12vw, 160px) 0;
@@ -524,20 +593,20 @@ section {
     font-size: 0.7rem;
     letter-spacing: 0.3em;
     text-transform: uppercase;
-    color: var(--gold);
+    color: var(--orange);
     display: block;
     margin-bottom: 16px;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .section-title {
     font-family: 'Noto Serif JP', serif;
-    font-size: clamp(2rem, 4vw, 3.2rem);
-    font-weight: 700;
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-weight: 900;
     color: var(--white);
     margin-bottom: 20px;
-    letter-spacing: 0.06em;
-    line-height: 1.4;
+    letter-spacing: 0.04em;
+    line-height: 1.3;
 }
 
 .section-subtitle {
@@ -582,7 +651,7 @@ section {
 }
 
 .lead-text strong {
-    color: var(--gold);
+    color: var(--orange);
     font-weight: 600;
     font-family: 'Noto Serif JP', serif;
 }
@@ -596,26 +665,61 @@ section {
 
 .asset-card {
     padding: 40px;
-    border-radius: 16px;
+    border-radius: 20px;
     transition: all var(--duration) var(--ease-out-expo);
     position: relative;
     overflow: hidden;
 }
 
 .asset-card.visible {
-    background: var(--black-light);
-    border: 1px solid var(--gray-900);
+    background: var(--cream);
+    border: 1.5px solid var(--cream-dark);
+}
+
+.asset-card.visible h3 {
+    color: var(--text-dark);
+}
+
+.asset-card.visible li {
+    color: var(--text-dark-secondary);
+}
+
+.asset-card.visible .asset-note {
+    color: var(--gray-600);
+    border-top-color: rgba(26, 26, 26, 0.1);
+}
+
+.asset-card.visible .card-badge {
+    color: var(--gray-600);
+    border-color: rgba(26, 26, 26, 0.2);
+}
+
+.asset-card.visible li::before {
+    background: var(--gray-600);
 }
 
 .asset-card.invisible {
-    background: linear-gradient(135deg, var(--black-card) 0%, var(--black-light) 100%);
-    border: 1px solid rgba(201,168,76,0.2);
+    background: var(--black-card);
+    border: 1.5px solid rgba(255,107,53,0.25);
+}
+
+.asset-card.invisible h3 {
+    color: var(--cream);
+}
+
+.asset-card.invisible li {
+    color: var(--gray-400);
+}
+
+.asset-card.invisible .asset-note {
+    color: var(--gray-500);
+    border-top-color: var(--gray-800);
 }
 
 .asset-card:hover {
     transform: translateY(-4px);
-    border-color: var(--gold);
-    box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 40px var(--gold-dim);
+    border-color: var(--orange);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 40px var(--orange-dim);
 }
 
 .card-badge {
@@ -626,15 +730,16 @@ section {
     color: var(--gray-600);
     margin-bottom: 20px;
     display: inline-block;
-    padding: 4px 12px;
-    border: 1px solid var(--gray-800);
+    padding: 5px 14px;
+    border: 1.5px solid var(--gray-800);
     border-radius: 100px;
+    font-weight: 600;
 }
 
 .card-badge.gold {
-    color: var(--gold);
-    border-color: rgba(201,168,76,0.3);
-    background: var(--gold-dim);
+    color: var(--orange);
+    border-color: rgba(255,107,53,0.35);
+    background: var(--orange-dim);
 }
 
 .asset-card h3 {
@@ -643,7 +748,7 @@ section {
     margin-bottom: 24px;
     color: var(--white);
     letter-spacing: 0.06em;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .asset-card ul {
@@ -673,7 +778,7 @@ section {
 }
 
 .asset-card.invisible li::before {
-    background: var(--gold);
+    background: var(--orange);
 }
 
 .asset-note {
@@ -686,12 +791,12 @@ section {
 }
 
 .mission-statement {
-    background: linear-gradient(135deg, var(--black-light), var(--black-card));
+    background: var(--cream);
     padding: 56px;
     border-radius: 20px;
     text-align: center;
     position: relative;
-    border: 1px solid var(--gray-900);
+    border: 1.5px solid var(--cream-dark);
     overflow: hidden;
 }
 
@@ -702,22 +807,22 @@ section {
     left: 50%;
     transform: translateX(-50%);
     width: 120px;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--orange), transparent);
 }
 
 .statement-icon {
-    color: var(--gold);
+    color: var(--orange);
     margin-bottom: 24px;
-    opacity: 0.5;
+    opacity: 0.6;
 }
 
 .statement-text {
     font-family: 'Noto Serif JP', serif;
     font-size: clamp(1.1rem, 1.8vw, 1.35rem);
     line-height: 2.2;
-    color: var(--gray-300);
-    font-weight: 400;
+    color: var(--text-dark);
+    font-weight: 500;
     letter-spacing: 0.04em;
 }
 
@@ -747,9 +852,9 @@ section {
 }
 
 .service-card {
-    background: var(--black);
-    border: 1px solid var(--gray-900);
-    border-radius: 16px;
+    background: var(--cream);
+    border: 1.5px solid var(--cream-dark);
+    border-radius: 20px;
     padding: 40px;
     transition: all var(--duration) var(--ease-out-expo);
     position: relative;
@@ -767,22 +872,22 @@ section {
     font-family: 'Inter', sans-serif;
     font-size: 0.7rem;
     letter-spacing: 0.1em;
-    color: var(--gray-800);
-    font-weight: 500;
+    color: rgba(26,26,26,0.2);
+    font-weight: 700;
 }
 
 .service-card:hover {
-    border-color: var(--gold);
+    border-color: var(--orange);
     transform: translateY(-4px);
-    box-shadow: 0 20px 60px rgba(0,0,0,0.3), 0 0 30px var(--gold-dim);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2), 0 0 30px var(--orange-dim);
 }
 
 .service-icon-wrap {
     width: 64px;
     height: 64px;
     border-radius: 16px;
-    background: var(--black-light);
-    border: 1px solid var(--gray-900);
+    background: rgba(26,26,26,0.06);
+    border: 1.5px solid rgba(26,26,26,0.08);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -791,8 +896,8 @@ section {
 }
 
 .service-card:hover .service-icon-wrap {
-    background: var(--gold-dim);
-    border-color: rgba(201,168,76,0.3);
+    background: var(--orange-dim);
+    border-color: rgba(255,107,53,0.3);
 }
 
 .service-icon {
@@ -807,29 +912,29 @@ section {
 .service-card h3 {
     font-family: 'Noto Serif JP', serif;
     font-size: 1.25rem;
-    color: var(--white);
+    color: var(--text-dark);
     margin-bottom: 16px;
     letter-spacing: 0.06em;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 1.5;
 }
 
 .service-card p {
-    color: var(--gray-500);
+    color: var(--text-dark-secondary);
     font-size: 0.9rem;
     line-height: 1.9;
     letter-spacing: 0.03em;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .service-arrow {
     margin-top: 24px;
-    color: var(--gray-800);
+    color: rgba(26,26,26,0.25);
     transition: all var(--duration-fast) ease;
 }
 
 .service-card:hover .service-arrow {
-    color: var(--gold);
+    color: var(--orange);
     transform: translate(4px, -4px);
 }
 
@@ -848,11 +953,11 @@ section {
     display: grid;
     grid-template-columns: 80px 1fr;
     gap: 32px;
-    margin-bottom: 48px;
+    margin-bottom: 24px;
     padding: 40px;
-    border-radius: 16px;
-    background: var(--black-light);
-    border: 1px solid var(--gray-900);
+    border-radius: 20px;
+    background: var(--cream);
+    border: 1.5px solid var(--cream-dark);
     transition: all var(--duration) var(--ease-out-expo);
     align-items: start;
 }
@@ -862,17 +967,17 @@ section {
 }
 
 .value-item:hover {
-    border-color: rgba(201,168,76,0.3);
+    border-color: var(--orange);
     transform: translateX(4px);
-    box-shadow: -4px 0 30px var(--gold-dim);
+    box-shadow: -4px 0 30px var(--orange-dim);
 }
 
 .value-number {
     font-family: 'Inter', sans-serif;
     font-size: 2.5rem;
-    font-weight: 200;
-    color: var(--gold);
-    opacity: 0.4;
+    font-weight: 800;
+    color: var(--orange);
+    opacity: 0.35;
     line-height: 1;
     letter-spacing: -0.02em;
     transition: opacity var(--duration-fast) ease;
@@ -887,18 +992,18 @@ section {
     font-family: 'Noto Serif JP', serif;
     font-size: 1.2rem;
     margin-bottom: 12px;
-    color: var(--white);
+    color: var(--text-dark);
     letter-spacing: 0.04em;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 1.6;
 }
 
 .value-text p {
-    color: var(--gray-500);
+    color: var(--text-dark-secondary);
     line-height: 1.9;
     font-size: 0.9rem;
     letter-spacing: 0.03em;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 /* ───────────────────── Cycle ───────────────────── */
@@ -932,8 +1037,8 @@ section {
 }
 
 .cycle-step {
-    background: var(--black);
-    border: 1px solid var(--gray-900);
+    background: var(--cream);
+    border: 1.5px solid var(--cream-dark);
     border-radius: 16px;
     padding: 28px 20px;
     text-align: center;
@@ -942,9 +1047,9 @@ section {
 }
 
 .cycle-step:hover {
-    border-color: var(--gold);
+    border-color: var(--orange);
     transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(0,0,0,0.3), 0 0 20px var(--gold-dim);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.3), 0 0 20px var(--orange-dim);
 }
 
 .cycle-icon {
@@ -956,9 +1061,9 @@ section {
 .cycle-label h3 {
     font-family: 'Noto Serif JP', serif;
     font-size: 0.9rem;
-    color: var(--white);
+    color: var(--text-dark);
     letter-spacing: 0.04em;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 4px;
 }
 
@@ -967,7 +1072,8 @@ section {
     font-size: 0.6rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: var(--gray-700);
+    color: var(--gray-600);
+    font-weight: 600;
 }
 
 .cycle-connector {
@@ -979,8 +1085,8 @@ section {
 
 .connector-line {
     width: 32px;
-    height: 1px;
-    background: linear-gradient(90deg, var(--gray-800), var(--gold), var(--gray-800));
+    height: 1.5px;
+    background: linear-gradient(90deg, var(--gray-800), var(--orange), var(--gray-800));
     position: relative;
 }
 
@@ -991,8 +1097,8 @@ section {
     top: -3px;
     width: 7px;
     height: 7px;
-    border-right: 1px solid var(--gold);
-    border-top: 1px solid var(--gold);
+    border-right: 1.5px solid var(--orange);
+    border-top: 1.5px solid var(--orange);
     transform: rotate(45deg);
 }
 
@@ -1002,7 +1108,7 @@ section {
     justify-content: center;
     gap: 8px;
     margin-top: 32px;
-    color: var(--gold);
+    color: var(--orange);
     opacity: 0.5;
 }
 
@@ -1011,6 +1117,7 @@ section {
     font-size: 0.7rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
+    font-weight: 600;
 }
 
 .cycle-description {
@@ -1025,8 +1132,8 @@ section {
 }
 
 .cycle-description strong {
-    color: var(--gold);
-    font-weight: 500;
+    color: var(--orange);
+    font-weight: 600;
 }
 
 /* ───────────────────── Contact ───────────────────── */
@@ -1076,7 +1183,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--gold);
+    color: var(--orange);
     flex-shrink: 0;
 }
 
@@ -1086,7 +1193,7 @@ section {
     letter-spacing: 0.1em;
     text-transform: uppercase;
     font-family: 'Inter', sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     margin-bottom: 4px;
 }
 
@@ -1096,10 +1203,10 @@ section {
 }
 
 .contact-form {
-    background: var(--black-light);
+    background: var(--cream);
     padding: 48px;
     border-radius: 20px;
-    border: 1px solid var(--gray-900);
+    border: 1.5px solid var(--cream-dark);
 }
 
 .form-row {
@@ -1115,40 +1222,40 @@ section {
 .form-group label {
     display: block;
     margin-bottom: 8px;
-    color: var(--gray-400);
-    font-weight: 400;
+    color: var(--text-dark-secondary);
+    font-weight: 500;
     letter-spacing: 0.04em;
     font-size: 0.85rem;
 }
 
 .required {
-    color: var(--gold);
+    color: var(--orange);
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
     padding: 14px 16px;
-    border: 1px solid var(--gray-800);
-    border-radius: 10px;
+    border: 1.5px solid rgba(26,26,26,0.12);
+    border-radius: 12px;
     font-size: 0.95rem;
     font-family: inherit;
     transition: all var(--duration-fast) ease;
-    background: var(--black);
-    color: var(--white);
+    background: var(--white);
+    color: var(--text-dark);
     letter-spacing: 0.03em;
     outline: none;
 }
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-    color: var(--gray-700);
+    color: var(--gray-500);
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-    border-color: var(--gold);
-    box-shadow: 0 0 0 3px var(--gold-dim);
+    border-color: var(--orange);
+    box-shadow: 0 0 0 3px var(--orange-dim);
 }
 
 .form-group textarea {
@@ -1159,26 +1266,27 @@ section {
 .submit-button {
     width: 100%;
     padding: 16px;
-    background: var(--white);
+    background: var(--orange);
     color: var(--black);
     border: none;
-    border-radius: 12px;
-    font-size: 0.95rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
+    border-radius: 100px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
     cursor: pointer;
     transition: all var(--duration-fast) var(--ease-out-quart);
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    font-family: inherit;
+    font-family: 'Inter', sans-serif;
 }
 
 .submit-button:hover {
-    background: var(--gold);
+    background: var(--orange-light);
     transform: translateY(-2px);
-    box-shadow: 0 8px 30px var(--gold-glow);
+    box-shadow: 0 8px 30px var(--orange-glow);
 }
 
 .submit-button svg {
@@ -1228,7 +1336,7 @@ section {
 .footer-brand-name {
     font-family: 'Noto Serif JP', serif;
     font-size: 1.3rem;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--white);
     letter-spacing: 0.15em;
     opacity: 0.8;
@@ -1244,17 +1352,20 @@ section {
 .footer-nav a {
     color: var(--gray-600);
     text-decoration: none;
-    font-size: 0.85rem;
-    letter-spacing: 0.06em;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
     transition: color var(--duration-fast) ease;
 }
 
 .footer-nav a:hover {
-    color: var(--gold);
+    color: var(--orange);
 }
 
 .nav-active {
-    color: var(--gold) !important;
+    color: var(--orange) !important;
 }
 
 .footer-tagline {
@@ -1266,7 +1377,7 @@ section {
 
 .footer-divider {
     width: 60px;
-    height: 1px;
+    height: 1.5px;
     background: var(--gray-800);
     margin: 0 auto 24px;
 }
@@ -1289,14 +1400,17 @@ section {
     display: inline-block;
     color: var(--gray-600);
     text-decoration: none;
-    font-size: 0.85rem;
-    letter-spacing: 0.04em;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
     margin-bottom: 40px;
     transition: color var(--duration-fast) ease;
 }
 
 .back-link:hover {
-    color: var(--gold);
+    color: var(--orange);
 }
 
 /* ───────────────────── Members ───────────────────── */
@@ -1314,8 +1428,8 @@ section {
 }
 
 .member-card {
-    background: var(--black-light);
-    border: 1px solid var(--gray-900);
+    background: var(--cream);
+    border: 1.5px solid var(--cream-dark);
     border-radius: 20px;
     padding: 40px;
     transition: all var(--duration) var(--ease-out-expo);
@@ -1325,9 +1439,9 @@ section {
 }
 
 .member-card:hover {
-    border-color: rgba(201,168,76,0.3);
+    border-color: var(--orange);
     transform: translateY(-4px);
-    box-shadow: 0 16px 50px rgba(0,0,0,0.3), 0 0 30px var(--gold-dim);
+    box-shadow: 0 16px 50px rgba(0,0,0,0.3), 0 0 30px var(--orange-dim);
 }
 
 .member-avatar {
@@ -1338,15 +1452,15 @@ section {
     width: 64px;
     height: 64px;
     border-radius: 16px;
-    background: linear-gradient(135deg, var(--gold-dim), rgba(59,130,246,0.1));
-    border: 1px solid var(--gray-800);
+    background: linear-gradient(135deg, var(--orange-dim), rgba(255,107,53,0.08));
+    border: 1.5px solid rgba(255,107,53,0.2);
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: 'Inter', sans-serif;
     font-size: 1.4rem;
-    font-weight: 600;
-    color: var(--gold);
+    font-weight: 700;
+    color: var(--orange);
     letter-spacing: 0;
 }
 
@@ -1360,17 +1474,17 @@ section {
     font-size: 0.65rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--gold);
+    color: var(--orange);
     display: block;
     margin-bottom: 8px;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .member-name {
     font-family: 'Noto Serif JP', serif;
     font-size: 1.3rem;
-    font-weight: 600;
-    color: var(--white);
+    font-weight: 700;
+    color: var(--text-dark);
     margin-bottom: 2px;
     letter-spacing: 0.06em;
 }
@@ -1381,26 +1495,15 @@ section {
     color: var(--gray-600);
     letter-spacing: 0.08em;
     margin-bottom: 16px;
+    font-weight: 500;
 }
 
 .member-bio {
     font-size: 0.85rem;
-    color: var(--gray-500);
+    color: var(--text-dark-secondary);
     line-height: 1.8;
     letter-spacing: 0.03em;
-    font-weight: 300;
-}
-
-@media (max-width: 768px) {
-    .members-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .member-card {
-        flex-direction: column;
-        gap: 20px;
-        padding: 32px 24px;
-    }
+    font-weight: 400;
 }
 
 /* ───────────────────── Scroll Progress ───────────────────── */
@@ -1409,7 +1512,7 @@ section {
     top: 0;
     left: 0;
     height: 2px;
-    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    background: linear-gradient(90deg, var(--orange), var(--orange-light));
     z-index: 9999;
     transform-origin: left;
     transform: scaleX(0);
@@ -1499,7 +1602,7 @@ section {
         position: fixed;
         inset: 0;
         flex-direction: column;
-        background: rgba(9, 9, 11, 0.98);
+        background: rgba(10, 10, 10, 0.98);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
         justify-content: center;
@@ -1548,6 +1651,25 @@ section {
     .hero-scroll-indicator {
         display: none;
     }
+
+    .members-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .member-card {
+        flex-direction: column;
+        gap: 20px;
+        padding: 32px 24px;
+    }
+
+    .tag-row {
+        gap: 8px;
+    }
+
+    .tag-pill {
+        padding: 6px 16px;
+        font-size: 0.65rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1562,11 +1684,23 @@ section {
 
     .cta-button {
         padding: 14px 28px;
-        font-size: 0.85rem;
+        font-size: 0.75rem;
     }
 
     .asset-card,
     .service-card {
         padding: 28px 20px;
+    }
+
+    .hero-title {
+        font-size: clamp(2.6rem, 10vw, 4rem);
+    }
+
+    .marquee-track span {
+        font-size: 0.75rem;
+    }
+
+    .section-title {
+        font-size: clamp(1.8rem, 7vw, 2.8rem);
     }
 }
